@@ -15,6 +15,22 @@ const styles = StyleSheet.create({
     viewCitys: {
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    apiDetailsContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 400,
+        marginLeft: 80,
+        flexDirection: 'row',
+        position: 'absolute',
+    },
+    apiDetailsContainer2: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 400,
+        marginLeft: 250,
+        flexDirection: 'row',
+        position: 'absolute',
     }
 })
 

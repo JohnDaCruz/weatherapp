@@ -13,8 +13,6 @@ import styles from "./style";
 //Import de componentes
 import BemVindo from "../src/bemVindo/bemVindo.js"
 import Api from "../src/weatherapi/api"
-import ApiDetails from "../src/apiDetails/apiDetails";
-
 
 export default function Page() {
   return (
@@ -26,7 +24,7 @@ export default function Page() {
         source={require('../src/images/sun.png')}
         style={{
           width: '100%',
-          height: 800,
+          height: 820,
         }}
       />
 
@@ -34,8 +32,6 @@ export default function Page() {
         <BemVindo />
         <Api />
       </View>
-
-      <ApiDetails />
 
     </Pressable>
   );
