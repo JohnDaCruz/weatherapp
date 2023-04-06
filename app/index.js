@@ -1,10 +1,8 @@
 import {
-  StyleSheet,
-  Text,
   View,
   Image,
-  ScrollView,
   Keyboard,
+  Pressable
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 //import { Link } from "expo-router";
@@ -21,7 +19,7 @@ import ApiDetails from "../src/apiDetails/apiDetails";
 export default function Page() {
   return (
 
-    <View style={styles.container}>
+    <Pressable onPress={Keyboard.dismiss} style={styles.container}>
       <StatusBar style={"light"} backgroundColor="#008DE3" />
 
       <Image
@@ -39,6 +37,6 @@ export default function Page() {
 
       <ApiDetails />
 
-    </View>
+    </Pressable>
   );
 }

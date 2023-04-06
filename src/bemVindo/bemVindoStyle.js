@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 40,
         marginTop: 10,
+        color: '#fff'
     },
     bemVindoView: {
 

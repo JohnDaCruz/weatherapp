@@ -7,8 +7,6 @@ const styles = StyleSheet.create({
         paddingTop: 10
     },
     bvapi: {
-        borderColor: '#000',
-        borderWidth: 1,
         padding: 5,
         marginTop: 35,
         position: 'absolute'
