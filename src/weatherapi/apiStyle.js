@@ -20,17 +20,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 400,
-        marginLeft: 80,
+        marginLeft: 50,
         flexDirection: 'row',
         position: 'absolute',
+        width: 90,
+        borderWidth: 1
     },
     apiDetailsContainer2: {
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 400,
-        marginLeft: 250,
+        marginLeft: 230,
         flexDirection: 'row',
         position: 'absolute',
+        width: 90,
+        borderWidth: 1
     }
 })
 

@@ -6,17 +6,28 @@ import { API_KEY } from '@env'
 
 export default function Api() {
 
-    const [city, setCity] = useState('New york');
+    const [city, setCity] = useState('Brasília');
     const [wind, setWind] = useState('0');
     const [temp, setTemp] = useState('0')
 
     useEffect(() => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
-            .then((res) => res.json())
-            .then((data) => {
-                setTemp(data.main.temp)
-                setWind(data.wind.speed)
-            })
+        try {
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
+                .then((res) => res.json())
+                .then((data) => {
+                    setTemp(data.main.temp)
+                    setWind(data.wind.speed)
+                    console.log(data.main.temp)
+                    console.log(data.wind.speed)
+                    console.log(data.name)
+                })
+                .catch((Error) => {
+                    console.error('Erro no catch fetch' + Error)
+                })
+        }
+        catch {
+            console.error('Erro no catch externo' + Error)
+        }
     }, [city])
 
 
@@ -28,15 +39,16 @@ export default function Api() {
                 inputMode="text"
                 placeholderTextColor={'#fff'}
                 value={city}
-                onChangeText={text => setCity(text)}
+                textAlign="center"
+                onChangeText={(text) => setCity(text)}
             />
             <View style={styles.apiDetailsContainer}>
                 <MaterialCommunityIcons name="temperature-celsius" size={20} color="white" />
-                <Text style={{ color: '#fff' }}>{temp}</Text>
+                <Text style={{ color: '#fff' }}> {temp}</Text>
             </View>
             <View style={styles.apiDetailsContainer2}>
                 <Feather name="wind" size={20} color="white" />
-                <Text style={{ color: '#fff' }}>{wind}</Text>
+                <Text style={{ color: '#fff' }}> {wind} m/s</Text>
             </View>
         </View>
 
