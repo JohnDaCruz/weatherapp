@@ -2,26 +2,31 @@ import {
   View,
   Image,
   Keyboard,
-  Pressable
+  Pressable,
+  Button
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-//import { Link } from "expo-router";
-//import * as Location from 'expo-location';
-//import * as Notifications from 'expo-notifications';
 import styles from "./style";
-
-//Import de componentes
 import BemVindo from "../src/bemVindo/bemVindo.js"
 import Api from "../src/weatherapi/api"
+import IMAGES from "../src/images/imageExport/images"
+
+var hours = new Date().getHours()
+var min = new Date().getMinutes()
+const imageDia = IMAGES.dia.uri
+const imageNoite = IMAGES.noite.uri
+
+console.log(hours, min)
+
 
 export default function Page() {
+
   return (
 
     <Pressable onPress={Keyboard.dismiss} style={styles.container}>
       <StatusBar style={"light"} backgroundColor="#008DE3" />
-
       <Image
-        source={require('../src/images/sun.png')}
+        source={min == 28 ? imageDia : imageNoite}
         style={{
           width: '100%',
           height: 820,
@@ -31,6 +36,7 @@ export default function Page() {
       <View style={styles.bvapi}>
         <BemVindo />
         <Api />
+
       </View>
 
     </Pressable>
