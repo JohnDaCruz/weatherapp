@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         position: 'absolute',
         width: 90,
-        borderWidth: 1
     },
     apiDetailsContainer2: {
         alignItems: 'center',
@@ -34,7 +33,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         position: 'absolute',
         width: 90,
-        borderWidth: 1
     },
     apiDetailsContainer3: {
         alignItems: 'center',
@@ -44,7 +42,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         position: 'absolute',
         width: 90,
-        borderWidth: 1
     },
     apiDetailsContainer4: {
         alignItems: 'center',
@@ -54,7 +51,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         position: 'absolute',
         width: 90,
-        borderWidth: 1
     },
 })
 

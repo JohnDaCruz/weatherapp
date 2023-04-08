@@ -1,3 +1,0 @@
-              <MaterialCommunityIcons name="temperature-celsius" size={20} color="white" style={{ marginRight:0}}/>
-                <Text>: 23</Text>
-                <Feather name="wind" size={20} color="white" />

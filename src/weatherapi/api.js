@@ -1,17 +1,16 @@
 import { View, TextInput, Text } from "react-native";
 import { MaterialCommunityIcons, Feather, Ionicons } from '@expo/vector-icons';
 import React, { useState, useEffect } from "react";
+import { API_KEY } from "@env"
 import styles from "./apiStyle"
-import { API_KEY } from '@env'
 
 export default function Api() {
 
     const [city, setCity] = useState('Sao Paulo');
-    const [wind, setWind] = useState();
-    const [temp, setTemp] = useState();
-    const [humidity, setHumidity] = useState();
-    const [pressure, setPressure] = useState();
-
+    const [wind, setWind] = useState('');
+    const [temp, setTemp] = useState('');
+    const [humidity, setHumidity] = useState('');
+    const [pressure, setPressure] = useState('');
 
     useEffect(() => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
@@ -21,12 +20,6 @@ export default function Api() {
                 setTemp(data.main.temp)
                 setHumidity(data.main.humidity)
                 setPressure(data.main.pressure)
-
-                console.log(data.main.temp)
-                console.log(data.wind.speed)
-                console.log(data.name)
-                console.log(data.main.humidity)
-                console.log(data.main.pressure)
             })
             .catch((Error) => {
                 console.error('Erro no catch fetch' + Error)
@@ -38,11 +31,11 @@ export default function Api() {
         <View styles={styles.viewCitys}>
             <TextInput
                 style={styles.inputCity}
-                placeholder="Sua cidade..."
+                placeholder={"Sua cidade..."}
                 inputMode="text"
                 placeholderTextColor={'#fff'}
                 textAlign="center"
-                vaule={city}
+                value={city}
                 onChangeText={(value) => setCity(value)}
             />
             <View style={styles.apiDetailsContainer}>

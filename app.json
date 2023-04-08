@@ -5,6 +5,14 @@
       "bundler": "metro"
     },
     "name": "weatherapp",
-    "slug": "weatherapp"
+    "slug": "weatherapp",
+    "extra": {
+      "eas": {
+        "projectId": "15cc3bca-a8dd-485e-97b1-5326f6c010b8"
+      }
+    },
+    "android": {
+      "package": "com.jjadam.weatherapp"
+    }
   }
 }
