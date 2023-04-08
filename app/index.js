@@ -13,6 +13,11 @@ import IMAGES from "../src/images/imageExport/images"
 
 var hours = new Date().getHours()
 var min = new Date().getMinutes()
+var data = new Date()
+
+//06:00 -> 18:00 = DIA
+//18:00 -> 06:00 = NOITE
+
 const imageDia = IMAGES.dia.uri
 const imageNoite = IMAGES.noite.uri
 
@@ -26,7 +31,7 @@ export default function Page() {
     <Pressable onPress={Keyboard.dismiss} style={styles.container}>
       <StatusBar style={"light"} backgroundColor="#008DE3" />
       <Image
-        source={min == 28 ? imageDia : imageNoite}
+        source={6 <= hours >= 18 ? imageDia : imageNoite}
         style={{
           width: '100%',
           height: 820,
@@ -36,7 +41,6 @@ export default function Page() {
       <View style={styles.bvapi}>
         <BemVindo />
         <Api />
-
       </View>
 
     </Pressable>
