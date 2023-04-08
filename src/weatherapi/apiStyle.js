@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         height: 40,
         borderRadius: 10,
         marginLeft: 90,
-        marginTop: 60,
+        marginTop: 40,
         padding: 10,
         color: '#fff'
     },
@@ -35,7 +35,27 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 90,
         borderWidth: 1
-    }
+    },
+    apiDetailsContainer3: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 500,
+        marginLeft: 50,
+        flexDirection: 'row',
+        position: 'absolute',
+        width: 90,
+        borderWidth: 1
+    },
+    apiDetailsContainer4: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 500,
+        marginLeft: 230,
+        flexDirection: 'row',
+        position: 'absolute',
+        width: 90,
+        borderWidth: 1
+    },
 })
 
 export default styles

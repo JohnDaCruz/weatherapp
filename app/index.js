@@ -29,7 +29,7 @@ export default function Page() {
   return (
 
     <Pressable onPress={Keyboard.dismiss} style={styles.container}>
-      <StatusBar style={"light"} backgroundColor="#008DE3" />
+      <StatusBar style={"light"} backgroundColor={6 <= hours >= 18 ? "#008DE3" : "#000416"} />
       <Image
         source={6 <= hours >= 18 ? imageDia : imageNoite}
         style={{
